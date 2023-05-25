@@ -12,3 +12,4 @@ params ["_player", "_jip"];
 #include "initScripts\initScripts.sqf";
 #include "initScripts\initDiary.sqf";
 #include "initScripts\initDisclaimer.sqf";
+#include "initScripts\initEquipment.sqf";
