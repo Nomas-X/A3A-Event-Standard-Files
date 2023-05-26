@@ -1,16 +1,21 @@
 /*
 Settings - Disable all uniform items if ACE is not loaded
 Change to false if you'd like to turn a setting off
-MicroDAGR uses the watch slot, so if you want to give the players a watch, just replace the class name
 
-The following items [Binoculars, Radios, and MicroDAGR if a radio doesn't need it] will not be replaced by this script.
+The following items [Binoculars, Maps, GPSs, Compasses, Watches, Radios, and MicroDAGR if a radio doesn't need it] will not be replaced by this script
+Radio programmers take priority over hand watches if _radioProgrammersForEveryone is set to true
+Radio Programmers will only be added if the player has a radio that needs the programmer
+If you are switching the binculars for a laser designator, make sure to enable the batteries setting
 */
 private _binocularsForEveryone = ["Binocular", true];
 private _mapsForEveryone = ["ItemMap", true];
+private _gpsForEveryone = ["ItemGPS", false];
 private _radiosForEveryone = ["TFAR_anprc148jem", true];
 private _compassesForEveryone = ["ItemCompass", true];
+private _handWatchesForEveryone = ["ItemWatch", true];
 private _radioProgrammersForEveryone = true;
 private _medicalAndMiscForEveryone = true;
+private _laserDesignatorBatteryForEveryone = false;
 
 // Uniform - The string is the item's classname, the number is the amount
 private _uniformItems = [
@@ -37,9 +42,23 @@ private _uniformItems = [
 ];
 
 // Execution - Do not change anything below this line
-// Maps gets executed before the lobby map screen so players can see the map screen.
+// Maps and GPSs get added before the lobby map screen so players can see the map screen.
+private _currentPlayerLoadout = getUnitLoadout player;
+
 if (_mapsForEveryone select 1) then {
-	player linkItem (_mapsForEveryone select 0);
+	private _currentPlayerMap = (_currentPlayerLoadout select 9) select 0;
+
+	if (_currentPlayerMap == "") then {
+		player linkItem (_mapsForEveryone select 0);
+	};
+};
+
+if (_gpsForEveryone select 1) then {
+	private _currentPlayerGPS = (_currentPlayerLoadout select 9) select 1;
+
+	if (_currentPlayerGPS == "") then {
+		player linkItem (_gpsForEveryone select 0);
+	};
 };
 
 if (getClientState == "BRIEFING READ") then {
@@ -51,31 +70,45 @@ if (getClientState == "BRIEFING READ") then {
 	private _uniformMaxLoad = (maxLoad _playerUniform) + 50;
 	[_playerUniform, _uniformMaxLoad] remoteExec ["setMaxLoad", 2];
 
-	private _currentPlayerLinkedItems = assignedItems player;
-
 	if (_binocularsForEveryone select 1) then {
-		private _binocularsChecker = binocular player;
-		if (_binocularsChecker == "") then {
+		private _currentPlayerBinoculars = binocular player;
+
+		if (_currentPlayerBinoculars == "") then {
 			player addWeaponGlobal (_binocularsForEveryone select 0);
 		};
 	};
 
-	if (_radiosForEveryone select 1) then {
-		if (_radiosForEveryone select 1) then {
-			private _radioChecker = _currentPlayerLinkedItems arrayIntersect _tfarCompatibleRadios;
-			if ((count _radioChecker) > 0) then {
-				_radioChecker = _currentPlayerLinkedItems arrayIntersect _programmerRequiredRadios;
-				if ((count _radioChecker) > 0 && _radioProgrammersForEveryone) then {
-					player linkItem "TFAR_microdagr";
+	if (_radiosForEveryone select 1 || _radioProgrammersForEveryone) then {
+		private _currentPlayerRadio = (_currentPlayerLoadout select 9) select 2;
+		private _radioChecker = _tfarCompatibleRadios findif {_x in _currentPlayerRadio};
+
+		if (_radioChecker == -1 && _radiosForEveryone select 1) then {
+			_currentPlayerRadio = _radiosForEveryone select 0;
+
+			player linkItem _currentPlayerRadio;
+		};
+
+		_radioChecker = _programmerRequiredRadios findif {_x in _currentPlayerRadio};
+
+		if (_radioProgrammersForEveryone && _radioChecker > -1) then {
+			player linkItem "TFAR_microdagr";
+		} else {
+			if (_handWatchesForEveryone select 1) then {
+				private _currentPlayerHandWatch = (_currentPlayerLoadout select 9) select 4;
+
+				if (_currentPlayerHandWatch == "") then {
+					player linkItem (_handWatchesForEveryone select 0);
 				};
-			} else {
-				player linkItem (_radiosForEveryone select 0);
 			};
 		};
 	};
 
 	if (_compassesForEveryone select 1) then {
-		player linkItem (_compassesForEveryone select 0);
+		private _currentPlayerCompass = (_currentPlayerLoadout select 9) select 3;
+		
+		if (_currentPlayerCompass == "") then {
+			player linkItem (_compassesForEveryone select 0);
+		};
 	};
 
 	if ((uniform player) != "") then {
@@ -84,5 +117,9 @@ if (getClientState == "BRIEFING READ") then {
 				player addItemToUniform (_x select 0);
 			};
 		} forEach _uniformItems;
+	};
+
+	if (_laserDesignatorBatteryForEveryone) then {
+		player addMagazineGlobal "Laserbatteries";
 	};
 };
