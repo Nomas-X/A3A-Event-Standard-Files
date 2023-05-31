@@ -44,9 +44,16 @@ class HR
     };
 };
 
-class A3A{
-    class AI{
+class A3A
+{
+    class AI
+	{
         class disableLayerAI {};
         class enableLayerAI {};
-    }
+    };
+	class Utility
+	{
+		class markTriggersInLayer{};
+		class markTriggersInMission{};
+	};
 };
