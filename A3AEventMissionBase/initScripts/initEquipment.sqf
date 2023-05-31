@@ -26,11 +26,15 @@ private _uniformItems = [
 	["acex_intelitems_notepad", 1], // Notepad
 	["ACE_CableTie", 2], // Cable Tie
 	["ACE_Canteen", 1], // Canteen
+	["ACE_SpraypaintBlack", 0], // Spray Paint (Black)
+	["ACE_SpraypaintBlue", 1], // Spray Paint (Blue)
+	["ACE_SpraypaintGreen", 0], // Spray Paint (Green)	
+	["ACE_SpraypaintRed", 0], // Spray Paint (Red)
 	// Medical
-	["ACE_fieldDressing", 0], // Basic Bandages
-	["ACE_elasticBandage", 10], // Elastic Bandages
-	["ACE_packingBandage", 10], // Packing Bandages
-	["ACE_quikclot", 0], // Quickclot Bandages
+	["ACE_fieldDressing", 0], // Bandage (Basic)
+	["ACE_elasticBandage", 10], // Bandage (Elastic)
+	["ACE_packingBandage", 10], // Bandage (Packing)
+	["ACE_quikclot", 0], // Bandage (QuickClot)
 	["ACE_epinephrine", 2], // Epinephrine
 	["ACE_morphine", 2], // Morphine
 	["ACE_bloodIV_250", 0], // Blood IV 250ml
@@ -112,7 +116,7 @@ if (getClientState == "BRIEFING READ") then {
 	};
 
 	if ((uniform player) != "") then {
-		{
+		{ 
 			for "_i" from 1 to (_x select 1) do {
 				player addItemToUniform (_x select 0);
 			};
