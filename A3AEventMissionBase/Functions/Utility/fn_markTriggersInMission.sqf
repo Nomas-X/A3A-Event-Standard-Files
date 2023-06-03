@@ -8,6 +8,7 @@ Arguments: <nil>
 Return Value: <nil>
 
 Example:
+	[] call A3A_fnc_markTriggersInMission;
 */
 private _allMissionTriggers = allMissionObjects "EmptyDetector";
 private _counter = 1;

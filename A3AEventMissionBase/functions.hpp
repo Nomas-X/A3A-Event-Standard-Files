@@ -55,5 +55,7 @@ class A3A
 	{
 		class markTriggersInLayer{};
 		class markTriggersInMission{};
+		class useRemoteReturn{};
+		class getLayer{};
 	};
 };
