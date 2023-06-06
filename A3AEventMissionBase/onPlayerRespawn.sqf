@@ -10,3 +10,6 @@ params ["_newUnit", "_oldUnit", "_respawn", "_respawnDelay"];
 
 #include "initScripts\initScripts.sqf";
 #include "initScripts\initEquipment.sqf";
+
+// Enable antiFlubber script for all players
+[] call A3A_fnc_antiFlubber;

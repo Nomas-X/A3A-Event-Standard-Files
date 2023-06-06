@@ -10,6 +10,7 @@ Return Value: <nil>
 
 Example:
 	[_Triggers] call A3A_fnc_markTriggersInLayer;
+	[[_layer], "A3A_fnc_getLayer", [], "A3A_fnc_markTriggersInLayer"] remoteExec ["A3A_fnc_useRemoteReturn", 2];
 */
 params ["_layer"];
 

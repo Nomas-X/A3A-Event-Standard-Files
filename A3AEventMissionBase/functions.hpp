@@ -46,6 +46,11 @@ class HR
 
 class A3A
 {
+	class Players
+	{
+		class basicEquipment {};
+		class antiFlubber {};
+	};
     class AI
 	{
         class disableLayerAI {};
@@ -53,9 +58,9 @@ class A3A
     };
 	class Utility
 	{
-		class markTriggersInLayer{};
-		class markTriggersInMission{};
-		class useRemoteReturn{};
-		class getLayer{};
+		class markTriggersInLayer {};
+		class markTriggersInMission {};
+		class useRemoteReturn {};
+		class getLayer {};
 	};
 };
