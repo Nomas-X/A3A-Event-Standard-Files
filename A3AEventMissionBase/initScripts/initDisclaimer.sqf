@@ -20,7 +20,7 @@ if (hasInterface) then {
 
 		// To add more text parts simply uncomment the line below, if you need a third then copy the lines below and give the layer a new name 
 		/*
-		sleep 5;
+		sleep 10;
 		
 		"disclaimerLayer_Extra" cutText  ["<t size='2'> Second text...</t>", "PLAIN", 5, true, true];
 		
