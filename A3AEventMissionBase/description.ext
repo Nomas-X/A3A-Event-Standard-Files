@@ -8,7 +8,7 @@ class Header
 // Section 1
 author= "NameHere [Antistasi Event Team]"; // Name of the creator(s)
 OnLoadName = "Mission name"; // Mission name in the loading screen, keep it short without operation
-OnLoadMission = "Powered by ArmaHosts"; // Bottom of the loading screen, don't change
+OnLoadMission = "Powered by Open Group"; // Bottom of the loading screen, don't change
 loadScreen = "Images\image.jpg"; // The picture displayed during loading screen
 overviewPicture = "Images\image.jpg"; // The picture displayed in the mission selection screen
 briefingName = "Operation Some Thing"; // The Mission name with operation displayed in the mission selection men
