@@ -8,7 +8,7 @@ Description:
 Arguments:
 	0. <Array> Includes parameters of the function that needs to be executed on the target machine
 	1. <String> The function to be executed on the target machine
-	2. <Array> Includes any parameters to be pased on to the callback
+	2. <Array> Includes any parameters to be passed on to the callback
 	3. <String> The function to be executed using the return from the first function
 
 Return Value: <nil>

@@ -53,5 +53,5 @@ _unit addEventHandler ["Hit", {
     [[_instigator,_source], _unit] remoteExecCall ["FFPP_fnc_punishment_FF",2,false];
 }];
 
-[3,format["Punishment Event Handlers Added to: %1",name _unit],_fileName] remoteExecCall ["FFPP_fnc_log",2,false];
+[3,format["Punishment Event Handlers Added to: %1 | ID64: %2",name _unit, getPlayerUID _unit],_fileName] remoteExecCall ["FFPP_fnc_log",2,false];
 true;

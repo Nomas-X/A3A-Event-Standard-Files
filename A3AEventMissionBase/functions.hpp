@@ -50,6 +50,7 @@ class A3A
 	{
 		class basicEquipment {};
 		class antiFlubber {};
+		class importPlan {};
 	};
     class AI
 	{

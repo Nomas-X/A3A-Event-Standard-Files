@@ -38,8 +38,43 @@ Arguments:
 Return Value: <nil>
 
 Example:
-	[[_var1, _var2], "my_fn_remote", [_var3], "my_fnc_local"] remoteExec ["A3A_fnc_useRemoteReturn", P_11];
-	[[_layer], "A3A_fnc_getLayer", [], "A3A_fnc_markTriggersInLayer"] remoteExec ["A3A_fnc_useRemoteReturn", 2];
+	private _binocularsForEveryone = ["Binocular", true];
+	private _mapsForEveryone = ["ItemMap", true];
+	private _GPSsForEveryone = ["ItemGPSs", false];
+	private _radiosForEveryone = ["TFAR_anprc148jem", true];
+	private _compassesForEveryone = ["ItemCompass", true];
+	private _handWatchesForEveryone = ["ItemWatch", true];
+	private _radioProgrammersForEveryone = true;
+	private _medicalAndMiscForEveryone = true;
+	private _laserDesignatorBatteryForEveryone = false;
+	private _uniformMaxLoadIncrease = 75;
+
+	private _uniformItems = [
+		["ACE_EarPlugs", 1],
+		["ACE_Flashlight_XL50", 1],
+		["ACE_MapTools", 1],
+		["acex_intelitems_notepad", 1],
+		["ACE_CableTie", 2],
+		["ACE_Canteen", 1],
+		["ACE_SpraypaintBlack", 0],
+		["ACE_SpraypaintBlue", 1],
+		["ACE_SpraypaintGreen", 0],
+		["ACE_SpraypaintRed", 0],
+		["ACE_fieldDressing", 0],
+		["ACE_elasticBandage", 10],
+		["ACE_packingBandage", 10],
+		["ACE_quikclot", 0],
+		["ACE_epinephrine", 2],
+		["ACE_morphine", 2],
+		["ACE_bloodIV_250", 0],
+		["ACE_bloodIV_500", 0],
+		["ACE_bloodIV", 0],
+		["ACE_personalAidKit", 0],
+		["ACE_splint", 2],
+		["ACE_tourniquet", 2]
+	];
+
+	[_binocularsForEveryone, _mapsForEveryone, _GPSsForEveryone, _radiosForEveryone, _compassesForEveryone, _handWatchesForEveryone, _radioProgrammersForEveryone, _medicalAndMiscForEveryone, _laserDesignatorBatteryForEveryone, _uniformItems, _uniformMaxLoadIncrease] call A3A_fnc_basicEquipment;
 */
 params ["_binocularsForEveryone", "_mapsForEveryone", "_GPSsForEveryone", "_radiosForEveryone", "_compassesForEveryone", "_handWatchesForEveryone", "_radioProgrammersForEveryone", "_medicalAndMiscForEveryone", "_laserDesignatorBatteryForEveryone", "_uniformItems", "_uniformMaxLoadIncrease"];
 
