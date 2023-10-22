@@ -44,7 +44,7 @@ class HR
     };
 };
 
-class A3A
+class AET
 {
 	class Players
 	{

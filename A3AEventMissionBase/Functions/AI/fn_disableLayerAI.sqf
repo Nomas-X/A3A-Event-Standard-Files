@@ -6,8 +6,8 @@
 	1. STRING: AI to disable
 
 	Example:
-	["Ambush Layer", "PATH"] call A3A_fnc_disableLayerAI;
-	["Layer 1", "TARGET"] call A3A_fnc_disableLayerAI;
+	["Ambush Layer", "PATH"] call AET_fnc_disableLayerAI;
+	["Layer 1", "TARGET"] call AET_fnc_disableLayerAI;
 */
 
 params [["_layer", "", ["asd"]], ["_ai", "", ["asd"]]];

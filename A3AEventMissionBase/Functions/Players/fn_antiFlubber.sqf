@@ -9,7 +9,7 @@ Arguments: <nil>
 Return Value: <nil>
 
 Example:
-	[] call A3A_fnc_antiFlubber;
+	[] call AET_fnc_antiFlubber;
 */
 
 if (hasInterface) then	// Run on all clients with an interface. Not the server(if dedicated) and not on headless clients.

@@ -11,7 +11,7 @@ _this call HR_fnc_dressUp;
 	[ACE_player, _x, true] call ace_safemode_fnc_setWeaponSafety;
 } forEach (weapons ACE_player);
 
-[missionNamespace, "A3A_disclaimerDone", {
+[missionNamespace, "AET_disclaimerDone", {
 	sleep 5;
 	{
 		[ACE_player, _x, false] call ace_safemode_fnc_setWeaponSafety;
@@ -20,7 +20,7 @@ _this call HR_fnc_dressUp;
 ] call BIS_fnc_addScriptedEventHandler;
 
 [] spawn {
-    waitUntil{!(isNil "A3A_disclaimerDone")};
+    waitUntil{!(isNil "AET_disclaimerDone")};
 };
 							
 // Dynamic groups system

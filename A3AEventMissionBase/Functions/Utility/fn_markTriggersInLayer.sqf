@@ -9,8 +9,8 @@ Arguments:
 Return Value: <nil>
 
 Example:
-	[_Triggers] call A3A_fnc_markTriggersInLayer;
-	[[_layer], "A3A_fnc_getLayer", [], "A3A_fnc_markTriggersInLayer"] remoteExec ["A3A_fnc_useRemoteReturn", 2];
+	[_Triggers] call AET_fnc_markTriggersInLayer;
+	[[_layer], "AET_fnc_getLayer", [], "AET_fnc_markTriggersInLayer"] remoteExec ["AET_fnc_useRemoteReturn", 2];
 */
 params ["_layer"];
 
@@ -22,8 +22,8 @@ private _counter = 1;
 	// Get all the trigger info and prepare markaer names
 	private _triggerPosition = getPosATL _x;
 	private _triggerText = triggerText _x;
-	private _triggerAreaMarkerName = "triggerArea_A3AScript_InLayer_" + str(_counter);
-	private _triggerPointMarkerName = "triggerPoint_A3AScript_InLayer_" + str(_counter);
+	private _triggerAreaMarkerName = "triggerArea_AETScript_InLayer_" + str(_counter);
+	private _triggerPointMarkerName = "triggerPoint_AETScript_InLayer_" + str(_counter);
 	private _triggerAreaInfo = triggerArea _x;
 
 	// Creates the trigger area marker and sets its settings

@@ -6,8 +6,8 @@
 	1. STRING: AI to enable
 
 	Example:
-	["Ambush Layer", "PATH"] call A3A_fnc_enableLayerAI;
-	["Layer 1", "TARGET"] call A3A_fnc_enableLayerAI;
+	["Ambush Layer", "PATH"] call AET_fnc_enableLayerAI;
+	["Layer 1", "TARGET"] call AET_fnc_enableLayerAI;
 */
 
 params [["_layer", "", ["asd"]], ["_ai", "", ["asd"]]];

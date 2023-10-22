@@ -8,7 +8,7 @@ Arguments: <nil>
 Return Value: <nil>
 
 Example:
-	[] call A3A_fnc_markTriggersInMission;
+	[] call AET_fnc_markTriggersInMission;
 */
 private _allMissionTriggers = allMissionObjects "EmptyDetector";
 private _counter = 1;
@@ -17,8 +17,8 @@ private _counter = 1;
 	// Get all the trigger info and prepare markaer names
 	private _triggerPosition = getPosATL _x;
 	private _triggerText = triggerText _x;
-	private _triggerAreaMarkerName = "triggerArea_A3AScript_InMission_" + str(_counter);
-	private _triggerPointMarkerName = "triggerPoint_A3AScript_InMission_" + str(_counter);
+	private _triggerAreaMarkerName = "triggerArea_AETScript_InMission_" + str(_counter);
+	private _triggerPointMarkerName = "triggerPoint_AETScript_InMission_" + str(_counter);
 	private _triggerAreaInfo = triggerArea _x;
 
 	// Creates the trigger area marker and sets its settings

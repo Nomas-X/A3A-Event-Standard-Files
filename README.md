@@ -1,4 +1,4 @@
-# A3A-Event user guide
+# AET-Event user guide
 ## Description.ext
 Each line has a comment next to it explaining what every line does and how and if it should be changed.
 

@@ -50,4 +50,4 @@ private _uniformItems = [
 	["ACE_tourniquet", 2] // Tourniquet
 ];
 
-[_binocularsForEveryone, _mapsForEveryone, _GPSsForEveryone, _radiosForEveryone, _compassesForEveryone, _handWatchesForEveryone, _radioProgrammersForEveryone, _medicalAndMiscForEveryone, _laserDesignatorBatteryForEveryone, _uniformItems, _uniformMaxLoadIncrease] call A3A_fnc_basicEquipment;
+[_binocularsForEveryone, _mapsForEveryone, _GPSsForEveryone, _radiosForEveryone, _compassesForEveryone, _handWatchesForEveryone, _radioProgrammersForEveryone, _medicalAndMiscForEveryone, _laserDesignatorBatteryForEveryone, _uniformItems, _uniformMaxLoadIncrease] call AET_fnc_basicEquipment;

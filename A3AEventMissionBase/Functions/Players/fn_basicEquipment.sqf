@@ -2,7 +2,7 @@
 Author: Redwan S / Nomas
 
 Description:
-    This function is used give a player the following basic equipment: Binoculars, Map, GPS, Radio, Compass, Watch, Radio Programmer, and basic medical and misc equipment in the uniform.
+    This function is used to give a player the following basic equipment: Binoculars, Map, GPS, Radio, Compass, Watch, Radio Programmer, and basic medical and misc equipment in the uniform.
 
 Arguments:
 	0. <Array> Includes settings of the binoculars for everyone parameter 
@@ -74,7 +74,7 @@ Example:
 		["ACE_tourniquet", 2]
 	];
 
-	[_binocularsForEveryone, _mapsForEveryone, _GPSsForEveryone, _radiosForEveryone, _compassesForEveryone, _handWatchesForEveryone, _radioProgrammersForEveryone, _medicalAndMiscForEveryone, _laserDesignatorBatteryForEveryone, _uniformItems, _uniformMaxLoadIncrease] call A3A_fnc_basicEquipment;
+	[_binocularsForEveryone, _mapsForEveryone, _GPSsForEveryone, _radiosForEveryone, _compassesForEveryone, _handWatchesForEveryone, _radioProgrammersForEveryone, _medicalAndMiscForEveryone, _laserDesignatorBatteryForEveryone, _uniformItems, _uniformMaxLoadIncrease] call AET_fnc_basicEquipment;
 */
 params ["_binocularsForEveryone", "_mapsForEveryone", "_GPSsForEveryone", "_radiosForEveryone", "_compassesForEveryone", "_handWatchesForEveryone", "_radioProgrammersForEveryone", "_medicalAndMiscForEveryone", "_laserDesignatorBatteryForEveryone", "_uniformItems", "_uniformMaxLoadIncrease"];
 

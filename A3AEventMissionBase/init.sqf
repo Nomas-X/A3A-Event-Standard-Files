@@ -8,4 +8,4 @@ FFPP_FFPunTellAdmin = true;
 //[VarName,true] call FFPP_fnc_punishment_FF_addEH;
 
 // Enables antiFlubber script for all players
-// [] call A3A_fnc_antiFlubber;
+// [] call AET_fnc_antiFlubber;

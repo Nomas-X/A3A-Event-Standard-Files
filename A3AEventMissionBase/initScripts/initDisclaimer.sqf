@@ -45,8 +45,8 @@ if (hasInterface) then {
         5 fadeRadio 1;
 
         sleep 5;
-        [missionNamespace, "A3A_disclaimerDone", []] call BIS_fnc_callScriptedEventHandler;
+        [missionNamespace, "AET_disclaimerDone", []] call BIS_fnc_callScriptedEventHandler;
     };
 
-    [missionNamespace, "A3A_disclaimerDone", {"dynamicBlur" ppEffectEnable false;}] call BIS_fnc_addScriptedEventHandler;
+    [missionNamespace, "AET_disclaimerDone", {"dynamicBlur" ppEffectEnable false;}] call BIS_fnc_addScriptedEventHandler;
 };
