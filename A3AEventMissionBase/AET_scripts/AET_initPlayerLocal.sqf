@@ -3,9 +3,6 @@ if (hasInterface) then {
 	[player] call FFPP_fnc_punishment_FF_addEH;
 };
 
-// Dressup
-_this call HR_fnc_dressUp;
-
 // Gun safety script
 {
 	[ACE_player, _x, true] call ace_safemode_fnc_setWeaponSafety;
@@ -19,9 +16,9 @@ _this call HR_fnc_dressUp;
 }
 ] call BIS_fnc_addScriptedEventHandler;
 
-[] spawn {
-    waitUntil{!(isNil "AET_disclaimerDone")};
-};
-							
 // Dynamic groups system
 ["InitializePlayer", [player, true]] call BIS_fnc_dynamicGroups;
+
+// Add "Import Plan" ace action to the units in the array
+private _importPlanPlayerList = ["Z_1", "Z_2", "P_1"] call HR_fnc_ValidateObjects;
+[player, _importPlanPlayerList, 0] call AET_fnc_importPlan;

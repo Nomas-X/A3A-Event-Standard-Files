@@ -9,7 +9,7 @@ Arguments:
 
 	1. <Array> Includes the list of units <Object> that a unit must be in to get the ACE action
 
-	2. <Number> The channel ID that the plan will be imported into
+	2. <Number> (Optional) - The channel ID that the plan will be imported into, default is 0
 
 Return Value: <nil>
 
@@ -121,6 +121,7 @@ if (_unit in _importPlanPlayerList) then {
 								systemchat "Plan was imported successfully!";
 							} else {
 								systemchat "Invalid input, a parsing error has occursed!";
+								[format["Parsing error triggered by: %1 | ID64: %2 | Using: %3", name player, getPlayerUID player, _plan]] remoteExec ["diag_log", 2, false];
 							};
 						} else {
 							systemchat "Invalid input, data pattern does not match!";

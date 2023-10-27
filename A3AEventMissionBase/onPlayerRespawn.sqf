@@ -8,5 +8,5 @@ Parameters:
 ---------------------------------------------------------------------------*/
 params ["_newUnit", "_oldUnit", "_respawn", "_respawnDelay"];
 
-#include "initScripts\initScripts.sqf";
-#include "initScripts\initEquipment.sqf";
+#include "AET_scripts\AET_onPlayerRespawn.sqf";
+#include "AET_scripts\AET_equipment.sqf";

@@ -17,7 +17,7 @@ if (hasInterface) then {
 		
 		"disclaimerLayer_Text" cutFadeout 0.5;
 
-		//To add more text parts simply uncomment the line below, if you need a third then copy the lines below and give the layer a new name
+		//To add more text parts simply uncomment the lines below, if you need a third then copy the lines below and give the layer a new name
 		/*
 		sleep 3;
 		

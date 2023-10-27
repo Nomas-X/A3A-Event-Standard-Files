@@ -27,17 +27,10 @@ class HR
     {
         class LGAirstrike {};
     };
-
-    class Players
-    {
-        class dressUp {};
-    };
-
     class UI
     {
         class customHint {};
     };
-
     class Utility
     {
         class ValidateObjects {};
@@ -51,6 +44,8 @@ class AET
 		class basicEquipment {};
 		class antiFlubber {};
 		class importPlan {};
+		class setFaces {};
+		class startInVehicle {};
 	};
     class AI
 	{

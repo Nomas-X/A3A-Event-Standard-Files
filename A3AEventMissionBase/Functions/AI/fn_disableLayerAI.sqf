@@ -1,4 +1,6 @@
 /*
+Author: Skippie, fixed by Nomas
+Description:
 	The function disables AI of all units in the given layer
 
 	Parameters:

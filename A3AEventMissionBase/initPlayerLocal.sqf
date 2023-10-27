@@ -9,11 +9,6 @@ Title
 ---------------------------------------------------------------------------*/
 params ["_player", "_jip"];
 
-#include "initScripts\initScripts.sqf";
-#include "initScripts\initDiary.sqf";
-#include "initScripts\initDisclaimer.sqf";
-#include "initScripts\initEquipment.sqf";
-
-// Add "Import Plan" ace action to the units in the array
-private _importPlanPlayerList = ["Z_1", "Z_2", "P_1"] call HR_fnc_ValidateObjects;
-[player, _importPlanPlayerList, 0] call AET_fnc_importPlan;
+#include "AET_scripts\AET_initPlayerLocal.sqf";
+#include "AET_scripts\AET_diary.sqf";
+#include "AET_scripts\AET_disclaimer.sqf";

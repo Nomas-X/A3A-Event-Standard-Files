@@ -1,4 +1,6 @@
 /*
+Author: Skippie, fixed by Nomas
+Description:
 	The function enables AI of all units in the given layer
 
 	Parameters:
