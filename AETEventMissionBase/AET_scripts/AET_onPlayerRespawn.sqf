@@ -19,4 +19,3 @@ You can use the AET_fnc_statInVehicle function to start a player inside a vehicl
 if (hasInterface) then {
 	[player] call FFPP_fnc_punishment_FF_addEH;
 };
-

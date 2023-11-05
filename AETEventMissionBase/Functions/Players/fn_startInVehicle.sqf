@@ -22,8 +22,19 @@ Example:
 params ["_unit", "_listOfPlayers", "_vehicle", ["_altPos", false]];
 
 if (_unit in _listOfPlayers) then {
-	if (alive _vehicle && _vehicle emptyPositions "Cargo" > 0) then {
-		_unit moveInCargo _vehicle;
+	if !(isNil {_vehicle}) then {
+		if (alive _vehicle && _vehicle emptyPositions "Cargo" > 0) then {
+			_unit moveInCargo _vehicle;
+		} else {
+			if (!(_altPos isEqualType false)) then {
+				if (_altPos isEqualType "") then {
+					_unit setPos (getMarkerPos _altPos);
+				};
+				if (_altPos isEqualType objNull) then {
+					_unit setPosATL (getPosATL _altPos);
+				};
+			};
+		};
 	} else {
 		if (!(_altPos isEqualType false)) then {
 			if (_altPos isEqualType "") then {
