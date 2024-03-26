@@ -13,7 +13,7 @@ Notes for mission makers editing this:
 
 private _binocularsForEveryone = ["Binocular", true];
 private _mapsForEveryone = ["ItemMap", true];
-private _GPSsForEveryone = ["ItemGPSs", false];
+private _GPSsForEveryone = ["ItemGPS", false];
 private _radiosForEveryone = ["TFAR_anprc148jem", true];
 private _compassesForEveryone = ["ItemCompass", true];
 private _handWatchesForEveryone = ["ItemWatch", true];
@@ -31,10 +31,10 @@ private _uniformItems = [
 	["acex_intelitems_notepad", 1], // Notepad
 	["ACE_CableTie", 2], // Cable Tie
 	["ACE_Canteen", 1], // Canteen
-	["ACE_SpraypaintBlack", 0], // Spray Paint (Black)
+	["ACE_SpraypaintBlack", 1], // Spray Paint (Black)
 	["ACE_SpraypaintBlue", 1], // Spray Paint (Blue)
-	["ACE_SpraypaintGreen", 0], // Spray Paint (Green)	
-	["ACE_SpraypaintRed", 0], // Spray Paint (Red)
+	["ACE_SpraypaintGreen", 1], // Spray Paint (Green)	
+	["ACE_SpraypaintRed", 1], // Spray Paint (Red)
 	// Medical
 	["ACE_fieldDressing", 0], // Bandage (Basic)
 	["ACE_elasticBandage", 10], // Bandage (Elastic)

@@ -44,3 +44,12 @@ class CfgFunctions {
 #include "cau\userinputmenus\systems\displaySlider.cpp"
 #include "cau\userinputmenus\systems\displayText.cpp"
 #include "cau\userinputmenus\systems\displayTextMulti.cpp"
+
+class Extended_PreInit_EventHandlers {
+    class My_pre_init_event {
+        init = "call compile preprocessFileLineNumbers 'Scripts\XEH_preInit.sqf'";
+    };
+};
+
+
+cba_settings_hasSettingsFile = 1;

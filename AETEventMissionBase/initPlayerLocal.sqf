@@ -12,3 +12,4 @@ params ["_player", "_jip"];
 #include "AET_scripts\AET_initPlayerLocal.sqf";
 #include "AET_scripts\AET_diary.sqf";
 #include "AET_scripts\AET_disclaimer.sqf";
+#include "AET_scripts\AET_equipment.sqf";
