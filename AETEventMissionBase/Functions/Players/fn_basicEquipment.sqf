@@ -33,8 +33,6 @@ Arguments:
 
 	8. <Array> Includes arrays of the classname of the items that should be added and how many of each, example: ["ACE_EarPlugs", 1]
 
-	9. <Number> The value of which the uniform max load will be increased by
-
 Return Value: <nil>
 
 Example:
@@ -47,7 +45,6 @@ Example:
 	private _radioProgrammersForEveryone = true;
 	private _medicalAndMiscForEveryone = true;
 	private _laserDesignatorBatteryForEveryone = false;
-	private _uniformMaxLoadIncrease = 75;
 
 	private _uniformItems = [
 		["ACE_EarPlugs", 1],
@@ -74,9 +71,9 @@ Example:
 		["ACE_tourniquet", 2]
 	];
 
-	[_binocularsForEveryone, _mapsForEveryone, _GPSsForEveryone, _radiosForEveryone, _compassesForEveryone, _handWatchesForEveryone, _radioProgrammersForEveryone, _medicalAndMiscForEveryone, _laserDesignatorBatteryForEveryone, _uniformItems, _uniformMaxLoadIncrease] call AET_fnc_basicEquipment;
+	[_binocularsForEveryone, _mapsForEveryone, _GPSsForEveryone, _radiosForEveryone, _compassesForEveryone, _handWatchesForEveryone, _radioProgrammersForEveryone, _medicalAndMiscForEveryone, _laserDesignatorBatteryForEveryone, _uniformItems] call AET_fnc_basicEquipment;
 */
-params ["_binocularsForEveryone", "_mapsForEveryone", "_GPSsForEveryone", "_radiosForEveryone", "_compassesForEveryone", "_handWatchesForEveryone", "_radioProgrammersForEveryone", "_medicalAndMiscForEveryone", "_laserDesignatorBatteryForEveryone", "_uniformItems", "_uniformMaxLoadIncrease"];
+params ["_binocularsForEveryone", "_mapsForEveryone", "_GPSsForEveryone", "_radiosForEveryone", "_compassesForEveryone", "_handWatchesForEveryone", "_radioProgrammersForEveryone", "_medicalAndMiscForEveryone", "_laserDesignatorBatteryForEveryone", "_uniformItems"];
 
 // Execution - Do not change anything below this line
 // Maps and GPSs get added before the lobby map screen so players can see the map screen.
@@ -99,23 +96,33 @@ if (_GPSsForEveryone select 1) then {
 };
 
 if (getClientState == "BRIEFING READ") then {
-	private _programmerRequiredRadios = ["TFAR_anprc154", "TFAR_pnr1000a", "TFAR_rf7800str"];
-	private _tfarCompatibleRadios = ["gm_radio_r126", "gm_radio_sem52a", "vn_o_item_radio_m252", "vn_b_item_radio_urc10", "TFAR_anprc148jem", "TFAR_anprc152", "TFAR_fadak"] + _programmerRequiredRadios;
-
-	if ((uniform player) != "") then {
-		private _playerUniform = uniformContainer player;
-		private _uniformMaxLoad = (maxLoad _playerUniform) + _uniformMaxLoadIncrease;
-		[_playerUniform, _uniformMaxLoad] remoteExec ["setMaxLoad", 2];
-
-		[_playerUniform, _uniformMaxLoad, _uniformItems] spawn {
-			params ["_playerUniform", "_uniformMaxLoad", "_uniformItems"];
-
-			waitUntil {sleep 1; (maxLoad _playerUniform) == _uniformMaxLoad;};
-			{ 
-				for "_i" from 1 to (_x select 1) do {
-					player addItemToUniform (_x select 0);
-				};
-			} forEach _uniformItems;
+	if (__medicalAndMiscForEveryone) then {
+		if ((uniform player) != "") then {
+			private _playerUniform = uniformContainer player;
+			[_playerUniform, _uniformItems] spawn {
+				params ["_playerUniform", "_uniformItems"];
+				{
+					private _canAddItem = [player, _x select 0, _x select 1, true, false, false] call CBA_fnc_canAddItem;
+					if (_canAddItem) then {
+						for "_i" from 1 to (_x select 1) do {
+							player addItemToUniform (_x select 0);
+						};
+					} else {
+						private _uniformCurrentLoad = maxLoad _playerUniform;
+						private _itemMass = getNumber (configFile >> "CfgWeapons" >> (_x select 0) >> "ItemInfo" >> "mass");
+						private _totalMass = _itemMass * (_x select 1);
+						private _newUniformMaxLoad = _totalMass + (loadAbs _playerUniform);
+						
+						[_playerUniform, _newUniformMaxLoad] remoteExec ["setMaxLoad", 2];
+						
+						waitUntil {sleep 1; (maxLoad _playerUniform) == _newUniformMaxLoad};
+						
+						for "_i" from 1 to (_x select 1) do {
+							player addItemToUniform (_x select 0);
+						};
+					};
+				} forEach _uniformItems;
+			};
 		};
 	};
 
@@ -128,6 +135,8 @@ if (getClientState == "BRIEFING READ") then {
 	};
 
 	if (_radiosForEveryone select 1 || _radioProgrammersForEveryone) then {
+		private _programmerRequiredRadios = ["TFAR_anprc154", "TFAR_pnr1000a", "TFAR_rf7800str"];
+		private _tfarCompatibleRadios = ["gm_radio_r126", "gm_radio_sem52a", "vn_o_item_radio_m252", "vn_b_item_radio_urc10", "TFAR_anprc148jem", "TFAR_anprc152", "TFAR_fadak"] + _programmerRequiredRadios;
 		private _currentPlayerRadio = (_currentPlayerLoadout select 9) select 2;
 		private _radioChecker = _tfarCompatibleRadios findif {_x in _currentPlayerRadio};
 
