@@ -8,7 +8,6 @@ Notes for mission makers editing this:
 5. Radio programmers take priority over hand watches if _radioProgrammersForEveryone is set to true
 6. Radio Programmers will only be added if the player has a radio that needs the programmer
 7. If you are switching the binculars for a laser designator, make sure to enable the batteries setting
-8. Increase the _uniformMaxLoadIncrease from 75 to 100 if you are adding PAKs, IVS, or more items
 */
 
 private _binocularsForEveryone = ["Binocular", true];
@@ -20,7 +19,6 @@ private _handWatchesForEveryone = ["ItemWatch", true];
 private _radioProgrammersForEveryone = true;
 private _medicalAndMiscForEveryone = true;
 private _laserDesignatorBatteryForEveryone = false;
-private _uniformMaxLoadIncrease = 75;
 
 // Uniform - The string is the item's classname, the number is the amount
 private _uniformItems = [
@@ -35,6 +33,7 @@ private _uniformItems = [
 	["ACE_SpraypaintBlue", 1], // Spray Paint (Blue)
 	["ACE_SpraypaintGreen", 1], // Spray Paint (Green)	
 	["ACE_SpraypaintRed", 1], // Spray Paint (Red)
+	["ACE_EntrenchingTool", 0], // Entrenching Tool
 	// Medical
 	["ACE_fieldDressing", 0], // Bandage (Basic)
 	["ACE_elasticBandage", 10], // Bandage (Elastic)
@@ -50,4 +49,4 @@ private _uniformItems = [
 	["ACE_tourniquet", 2] // Tourniquet
 ];
 
-[_binocularsForEveryone, _mapsForEveryone, _GPSsForEveryone, _radiosForEveryone, _compassesForEveryone, _handWatchesForEveryone, _radioProgrammersForEveryone, _medicalAndMiscForEveryone, _laserDesignatorBatteryForEveryone, _uniformItems, _uniformMaxLoadIncrease] call AET_fnc_basicEquipment;
+[_binocularsForEveryone, _mapsForEveryone, _GPSsForEveryone, _radiosForEveryone, _compassesForEveryone, _handWatchesForEveryone, _radioProgrammersForEveryone, _medicalAndMiscForEveryone, _laserDesignatorBatteryForEveryone, _uniformItems] call AET_fnc_basicEquipment;

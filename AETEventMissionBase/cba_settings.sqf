@@ -1,8 +1,61 @@
+// MISSION MAKERS ONLY TOUCH THIS //
+// ACE Advanced Balistics -> Advanced Ballistics = true or false //
+force ace_advanced_ballistics_enabled = true;
+// ACE Artillery -> Artillery Computer Disabled = true or false //
+force ace_artillerytables_disableArtilleryComputer = false;
+// ACE Headless -> Enabled = true or false //
+force acex_headless_enabled = false;
+// ACE Logistics -> Rearm Amount = 0, 1, or 2 [0 = Entire Vehicle, 1 = Entire Magazine, 2 = Amount based on caliber] //
+force ace_rearm_level = 1;
+// ACE Medical -> Self Stitching = 0 or 1 [0 = No, 1 = Yes] //
+force ace_medical_treatment_allowSelfStitch = 0;
+// ACE Overheating -> Suppressor Coefficient = 0.00 to 5.00 //
+force ace_overheating_suppressorCoef = 1;
+// ACE Pylons -> Enable Pylons Menu from Ammo Trucks = true or false //
+force ace_pylons_enabledFromAmmoTrucks = true;
+// ACE View Restriction -> (Selective) Foot = 0, 1, or 2 [0 = Disabled, 1 = Forced 1st Person, 2 = Forced 3rd Person] //
+force acex_viewrestriction_modeSelectiveFoot = 0;
+// ACE View Restriction -> (Selective) Land Vehicles = 0, 1, or 2 [0 = Disabled, 1 = Forced 1st Person, 2 = Forced 3rd Person] //
+force acex_viewrestriction_modeSelectiveLand = 0;
+// ACE View Restriction -> (Selective) Air Vehicles = 0, 1, or 2 [0 = Disabled, 1 = Forced 1st Person, 2 = Forced 3rd Person] //
+force acex_viewrestriction_modeSelectiveAir = 0;
+// ACE View Restriction -> (Selective) Sea Vehicles = 0, 1, or 2 [0 = Disabled, 1 = Forced 1st Person, 2 = Forced 3rd Person] //
+force acex_viewrestriction_modeSelectiveSea = 0;
+// Unit Voice-overs -> BLUFOR UVO Language = "NONE", "WEST", "EAST", "GUER", "AMER", "BRIT", "ASIA", "FREN", "GERM", "RUSS", "ARAB", "CZ", "POL" or "JP" //
+force AET_UVO_BLUFOR_LANGUAGE = "WEST";
+// Unit Voice-overs -> INDFOR UVO Language = "NONE", "WEST", "EAST", "GUER", "AMER", "BRIT", "ASIA", "FREN", "GERM", "RUSS", "ARAB", "CZ", "POL" or "JP" //
+force AET_UVO_GUER_LANGUAGE = "GUER";
+// Unit Voice-overs -> OPFOR UVO Language = "NONE", "WEST", "EAST", "GUER", "AMER", "BRIT", "ASIA", "FREN", "GERM", "RUSS", "ARAB", "CZ", "POL" or "JP" //
+force AET_UVO_OPFOR_LANGUAGE = "EAST";
+// Unit Voice-overs -> CIV UVO Language = "NONE", "WEST", "EAST", "GUER", "AMER", "BRIT", "ASIA", "FREN", "GERM", "RUSS", "ARAB", "CZ", "POL" or "JP" //
+force AET_UVO_CIV_LANGUAGE = "NONE";
+/* UVO Languages Guide 
+"NONE" = Disabled
+"WEST" = WEST [English]
+"EAST" = EAST [English]
+"GUER" = GUER [English]
+"AMER" = American & British [English]
+"BRIT" = British [English]
+"ASIA" = Chinese
+"FREN" = French
+"GERM" = German
+"RUSS" = Russian
+"ARAB" = Arabic
+"CZ" = Czech
+"POL" = Polish
+"JP" = Japanese
+*/
+
+
+// Anything below this comment REQUIRES an Event Team Lead's permission //
+
+
+
 // ACE Advanced Ballistics
 force force ace_advanced_ballistics_ammoTemperatureEnabled = true;
 force force ace_advanced_ballistics_barrelLengthInfluenceEnabled = true;
 force force ace_advanced_ballistics_bulletTraceEnabled = true;
-force ace_advanced_ballistics_enabled = true;
+//force ace_advanced_ballistics_enabled = true;
 force force ace_advanced_ballistics_muzzleVelocityVariationEnabled = true;
 force force ace_advanced_ballistics_simulationInterval = 0.05;
 
@@ -49,7 +102,7 @@ ace_arsenal_loadoutsSaveVoice = false;
 
 // ACE Artillery
 force ace_artillerytables_advancedCorrections = false;
-force ace_artillerytables_disableArtilleryComputer = false;
+// force ace_artillerytables_disableArtilleryComputer = false;
 force ace_mk6mortar_airResistanceEnabled = false;
 force ace_mk6mortar_allowCompass = true;
 force ace_mk6mortar_allowComputerRangefinder = true;
@@ -154,7 +207,7 @@ force force ace_grenades_convertExplosives = true;
 
 // ACE Headless
 force force acex_headless_delay = 5;
-force acex_headless_enabled = false;
+//force acex_headless_enabled = false;
 force force acex_headless_endMission = 0;
 force force acex_headless_log = true;
 force force acex_headless_transferLoadout = 1;
@@ -370,7 +423,7 @@ ace_cargo_openAfterUnload = 0;
 force force ace_cargo_paradropTimeCoefficent = 1;
 force ace_rearm_distance = 25;
 force force ace_rearm_enabled = true;
-force ace_rearm_level = 1;
+//force ace_rearm_level = 1;
 force force ace_rearm_supply = 0;
 force ace_refuel_cargoRate = 10;
 force ace_refuel_hoseLength = 25;
@@ -458,7 +511,7 @@ force force ace_medical_treatment_allowGraveDigging = 0;
 force ace_medical_treatment_allowLitterCreation = true;
 force force ace_medical_treatment_allowSelfIV = 1;
 force ace_medical_treatment_allowSelfPAK = 0;
-force ace_medical_treatment_allowSelfStitch = 0;
+//force ace_medical_treatment_allowSelfStitch = 0;
 force ace_medical_treatment_allowSharedEquipment = 0;
 force ace_medical_treatment_bandageEffectiveness = 1;
 force force ace_medical_treatment_bandageRollover = true;
@@ -569,7 +622,7 @@ force ace_overheating_overheatingRateOfFire = true;
 ace_overheating_particleEffectsAndDispersionDistance = 3000;
 ace_overheating_showParticleEffects = true;
 ace_overheating_showParticleEffectsForEveryone = false;
-force ace_overheating_suppressorCoef = 1;
+//force ace_overheating_suppressorCoef = 1;
 force force ace_overheating_unJamFailChance = 0.5;
 force force ace_overheating_unJamOnreload = false;
 force force ace_overheating_unJamOnSwapBarrel = true;
@@ -584,7 +637,7 @@ force force ace_finger_sizeCoef = 1;
 
 // ACE Pylons
 force force ace_pylons_enabledForZeus = true;
-force ace_pylons_enabledFromAmmoTrucks = true;
+//force ace_pylons_enabledFromAmmoTrucks = true;
 force ace_pylons_rearmNewPylons = true;
 force force ace_pylons_requireEngineer = false;
 force force ace_pylons_requireToolkit = false;
@@ -743,10 +796,10 @@ ace_viewdistance_viewDistanceOnFoot = 2000;
 
 // ACE View Restriction
 force force acex_viewrestriction_mode = 3;
-force acex_viewrestriction_modeSelectiveAir = 0;
-force acex_viewrestriction_modeSelectiveFoot = 0;
-force acex_viewrestriction_modeSelectiveLand = 0;
-force acex_viewrestriction_modeSelectiveSea = 0;
+//force acex_viewrestriction_modeSelectiveAir = 0;
+//force acex_viewrestriction_modeSelectiveFoot = 0;
+//force acex_viewrestriction_modeSelectiveLand = 0;
+//force acex_viewrestriction_modeSelectiveSea = 0;
 acex_viewrestriction_preserveView = false;
 
 // ACE Volume
@@ -1059,10 +1112,10 @@ force force uvo_uas_minIntWhistle = 120;
 force force uvo_uas_radioOperator = 0;
 
 // Unit Voice-overs
-force AET_UVO_BLUFOR_LANGUAGE = "WEST";
-force AET_UVO_CIV_LANGUAGE = "NONE";
-force AET_UVO_GUER_LANGUAGE = "GUER";
-force AET_UVO_OPFOR_LANGUAGE = "EAST";
+//force AET_UVO_BLUFOR_LANGUAGE = "WEST";
+//force AET_UVO_CIV_LANGUAGE = "NONE";
+//force AET_UVO_GUER_LANGUAGE = "GUER";
+//force AET_UVO_OPFOR_LANGUAGE = "EAST";
 force uvo_main_compatExplosive = "";
 force uvo_main_compatFlash = "";
 force uvo_main_compatFrag = "";
