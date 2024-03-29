@@ -2,7 +2,7 @@
 ## description.ext
 Each line has a comment next to it explaining what every line does and how and if it should be changed.
 
-The main parameter to change as a mission maker are:
+The main parameters to change as a mission maker are:
 * author
 * OnLoadName
 * loadScreen
@@ -10,7 +10,7 @@ The main parameter to change as a mission maker are:
 * briefingName
 * overviewText
 
-If you making a mission with respawns you should look into those parameters:
+If you are making a mission with respawns you should look into those parameters:
 * respawnDelay
 
 If you are not using ACE in your mission, make sure to change the parameter `respawnTemplates` to `respawnTemplates[] = {"Spectator"}`
@@ -101,7 +101,7 @@ private _listOfPlayers_2 = ["P_1", "P_2", "P_3"] call HR_fnc_ValidateObjects;
 [player, _listOfPlayers_2, HELI_2, "LZ"] call AET_fnc_startInVehicle;
 ```
 
-### diableLayerAI
+### disableLayerAI
 Disables an AI feature for all units within a given layer.
 
 Recommended to use over unit init fields in the editor.
@@ -130,7 +130,7 @@ Takes all triggers in a Layer and places an area marker on it with its size and 
 
 Recommended to use by mission makers to allow Zeus to see triggers on the map.
 
-Execute in `initServer.sqf`.
+Execute in `onPlayerRespawn.sqf`.
 
 Example:
 ```sqf
@@ -146,7 +146,7 @@ Finds each trigger in the mission, places an area marker on it with its size and
 
 Recommended to use by mission makers to allow Zeus to see triggers on the map or to help during Quality Assurance.
 
-Execute in `initServer.sqf`.
+Execute in `onPlayerRespawn.sqf`.
 
 Example:
 ```sqf
