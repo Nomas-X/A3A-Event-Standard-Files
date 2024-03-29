@@ -29,7 +29,7 @@ force AET_UVO_GUER_LANGUAGE = "GUER";
 force AET_UVO_OPFOR_LANGUAGE = "EAST";
 // Unit Voice-overs -> CIV UVO Language = "NONE", "WEST", "EAST", "GUER", "AMER", "BRIT", "ASIA", "FREN", "GERM", "RUSS", "ARAB", "CZ", "POL" or "JP" //
 force AET_UVO_CIV_LANGUAGE = "NONE";
-/* UVO Languages Guide 
+/* UVO Languages Guide
 "NONE" = Disabled
 "WEST" = WEST [English]
 "EAST" = EAST [English]
@@ -45,6 +45,8 @@ force AET_UVO_CIV_LANGUAGE = "NONE";
 "POL" = Polish
 "JP" = Japanese
 */
+// MISSION MAKERS ONLY TOUCH THIS //
+
 
 
 // Anything below this comment REQUIRES an Event Team Lead's permission //

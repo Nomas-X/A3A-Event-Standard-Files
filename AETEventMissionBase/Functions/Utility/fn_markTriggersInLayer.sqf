@@ -1,7 +1,7 @@
 /*
 Author: Redwan S. / Nomas
 Description:
-    This function takes all triggers in a Layer and places an area marker on it with its size and places a normal marker on the Trigger's center.
+    This function takes all triggers in a Layer and places an area marker on it with its size and places a normal marker on the Trigger's center with the trigger's name.
 
 Arguments:
 	0. <String> Layer Name

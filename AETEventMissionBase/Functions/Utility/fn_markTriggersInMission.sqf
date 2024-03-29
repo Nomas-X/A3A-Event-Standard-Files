@@ -1,7 +1,7 @@
 /*
 Author: Redwan S. / Nomas
 Description:
-    This function finds each trigger in the mission, places an area marker on it with its size and places a normal marker on the Trigger's center.
+    This function finds each trigger in the mission, places an area marker on it with its size and places a normal marker on the Trigger's center with the trigger's name.
 
 Arguments: <nil>
 
