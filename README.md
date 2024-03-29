@@ -137,7 +137,7 @@ Example:
 private _listOfPlayers_3 = ["Z_1", "Z_2"] call HR_fnc_ValidateObjects;
 
 if (player in _listOfPlayers_3) then {
-	[[_layer], "AET_fnc_getLayer", [], "AET_fnc_markTriggersInLayer"] remoteExec ["AET_fnc_useRemoteReturn", 2];
+	[["Triggers_Layer"], "AET_fnc_getLayer", [], "AET_fnc_markTriggersInLayer"] remoteExec ["AET_fnc_useRemoteReturn", 2];
 };
 ```
 
