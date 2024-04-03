@@ -20,15 +20,15 @@ _player createDiaryRecord ["Diary", ["Signals","
 	Etc...<br/><br/>"
 ]];
 
-_player createDiaryRecord ["Diary", ["Execution","
-	1- Move in into the outpost<br/><br/>
-	2- Hold the outpost until reinforcments arrive<br/><br/>
-	Etc...<br/><br/>"
-]];
-
 _player createDiaryRecord ["Diary", ["Additional","
 	1- There are still civilian population in the area<br/><br/>
 	2- There is active AAA around the outpost<br/><br/>
+	Etc...<br/><br/>"
+]];
+
+_player createDiaryRecord ["Diary", ["Execution","
+	1- Move in into the outpost<br/><br/>
+	2- Hold the outpost until reinforcments arrive<br/><br/>
 	Etc...<br/><br/>"
 ]];
 

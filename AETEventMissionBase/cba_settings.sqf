@@ -62,21 +62,19 @@ force force ace_advanced_ballistics_muzzleVelocityVariationEnabled = true;
 force force ace_advanced_ballistics_simulationInterval = 0.05;
 
 // ACE Advanced Fatigue
-force ace_advanced_fatigue_deployedSwayFactor = 1;
 force ace_advanced_fatigue_enabled = true;
 force force ace_advanced_fatigue_enableStaminaBar = true;
 force force ace_advanced_fatigue_fadeStaminaBar = true;
 force ace_advanced_fatigue_loadFactor = 1;
 force ace_advanced_fatigue_performanceFactor = 1;
 force ace_advanced_fatigue_recoveryFactor = 3;
-force ace_advanced_fatigue_restedSwayFactor = 1;
-force ace_advanced_fatigue_swayFactor = 0.5;
 force ace_advanced_fatigue_terrainGradientFactor = 1;
 
 // ACE Advanced Throwing
 force force ace_advanced_throwing_enabled = true;
 force force ace_advanced_throwing_enablePickUp = true;
 force force ace_advanced_throwing_enablePickUpAttached = true;
+ace_advanced_throwing_enableTempWindInfo = true;
 force force ace_advanced_throwing_showMouseControls = true;
 force force ace_advanced_throwing_showThrowArc = true;
 
@@ -104,7 +102,7 @@ ace_arsenal_loadoutsSaveVoice = false;
 
 // ACE Artillery
 force ace_artillerytables_advancedCorrections = false;
-// force ace_artillerytables_disableArtilleryComputer = false;
+//force ace_artillerytables_disableArtilleryComputer = false;
 force ace_mk6mortar_airResistanceEnabled = false;
 force ace_mk6mortar_allowCompass = true;
 force ace_mk6mortar_allowComputerRangefinder = true;
@@ -125,12 +123,16 @@ force force ace_common_allowFadeMusic = true;
 force ace_common_checkPBOsAction = 2;
 force ace_common_checkPBOsCheckAll = true;
 force ace_common_checkPBOsWhitelist = "['DynaSound_DS_a_Taru', 'squad_rh202_gm', 'squad_sound_2a42', 'squad_explosion_soundmod', 'squad_sound_metis', 'squad_sound_d81_azp23_2a14_d10', 'squad_sound_m1911', 'squad_l85_cup', 'JSRS_soundmod_gm_support', 'crowsza_zeus_text', 'squad_m14_cup', 'L_Immerse_Immerse_main', 'KKA3_ACE_Extension_Anim_dire', 'squad_m68_cup', 'squad_sks_cup', 'DynaSound_DS_a_Xiang', 'bettinv_main', 'squad_akgl_cup', 'AMZ_mraws_sounds', 'AMZ_smokelauncher_sounds', 'squad_famas_3cbf', 'DynaSound_DS_w_Rahim', 'squad_mp2_gm', 'DynaSound_DS_w_EBR', 'PS_AMZ_M1919V', 'squad_sa61_sounds', 'squad_pk_cup', 'tsp_sound', 'squad_cz805_cup', 'UPSL_aime_vehicle_seats', 'AMZ_minigun_v2', 'bettinv_main_ace', 'squad_sound_ags30', 'jsrs_soundmod_movement', 'squad_sound_2a28', 'squad_dshk_cup', 'squad_sound_mk19', 'PS_AMZ_sten', 'fxp_LauncherExp', 'PS_AMZ_Bazooka', 'PS_AMZ_FG42', 'squad_scar_sounds', 'diwako_dui_buddy', 'squad_mp7_cup', 'squad_50cal_gm', 'squad_pzf44_gm', 'squad_g36_gm', 'DynaSound_DS_w_SPAR762', 'AMZ_coax_sounds', 'PDT_ENVG', 'AMZ_LMG_sounds', 'jsrs_soundmod_cfg_rhs_usf_vehicles', 'squad_scorpion_sound', 'AMZ_minigun_v1', 'NVGJammer', 'squad_m1911_cup', 'squad_m168_cup', 'AMZ_rpg7_sounds', 'squad_kpvt_cup', 'PS_AMZ_Rocket', 'DynaSound_DS_w_Autocannon', 'PS_AMZ_MG42', 'squad_m17_cup', 'jsrs_soundmod_rhs_afrf_weapons', 'squad_sound_kpvt', 'squad_fnfal_cup', 'squad_m16_3cbf', 'PS_AMZ_PTRD41', 'PS_AMZ_Panzershreck', 'amz_improved_weapon_ifv', 'squad_cz550', 'squad_m107_cup', 'squad_sound_aks74u', 'crowsza_misc', 'DynaSound_DS_w_Lynx', 'squad_rpg18_gm', 'squad_pzf3', 'squad_m242_cup', 'PS_AMZ_TT33', 'squad_sound_pkm', 'squad_usp_3cbf', 'PS_AMZ_m1911', 'DynaSound_DS_w_PCML', 'cem_common', 'squad_bulletcrack_soundimpact', 'diwako_dui_indicators', 'squad_sound_m136at4', 'fxp_VehExpEffectSmall', 'Reeveli_TFAR_SOGPF_scribbles', 'squad_cup_m4', 'squad_m9_cup', 'squad_mk19_cup', 'squad_m72_gm', 'squad_CZ99_sounds', 'fxp_VehExpEffectBig', 'AMZ_50cal_sounds', 'squad_sound_kornet', 'A3TI', 'squad_aks_cup', 'squad_l110_cup', 'DynaSound_DS_w_Tails', 'squad_Milan_gm', 'squad_weapon_m9beretta', 'DynaSound_DS_w_155mm', 'squad_m249_cup', 'squad_acr_cup', 'DynaSound_DS_w_Katiba', 'squad_leeenfield_3cbf', 'squad_m14_sounds', 'squad_sound_m249_m240', 'squad_aks74_cup', 'squad_g36_sounds', 'jsrs_soundmod_rhs_usf_weapons', 'PS_AMZ_M1Carbine', 'squad_m9shield_cup', 'squad_browningpistol_3cbf', 'DynaSound_DS_w_UGL', 'L_Suppress_Suppress_main', 'Reeveli_TFAR_scribbles', 'squad_sound_m252', 'fxp_VehPlane', 'squad_rpg18_cup', 'DynaSound_DS_w_Launcher_Big', 'squad_missiles_exp_cup', 'DynaSound_DS_w_GMG', 'jsrs_soundmod_bullethits', 'squad_ak74m_cup', 'fxp_RPGthru', 'DynaSound_DS_w_Titan', 'AdvDevTools_Fonts', 'PS_AMZ_50cal', 'AMZ_40mmgl_sounds', 'DynaSound_DS_m_Explosions', 'squad_sound_m24', 'postscriptum_savz58_sounds', 'PS_AMZ_M1919V2', 'squad_sound_ak74', 'DynaSound_DS_w_F2000', 'squad_m24_cup', 'postscriptum_kar98k_sounds', 'squad_r11rsass_cup', 'PS_AMZ_Lee_enfield', 'Small_Ragdoll', 'fxp_VehTankWhe', 'squad_m3grease_cup', 'crowsza_pingbox', 'squad_weapon_soundmod', 'DynaSound_DS_w_Tavor', 'squad_m60_cup', 'squad_sound_rpg26', 'PS_AMZ_V_QF17', 'squad_sound_dshk_kord_nsvt', 'jsrs_soundmod_ce_reloadingsounds', 'Ca', 'zeus_additions_main', 'jsrs_soundmod_cfg_rhs_afrf_vehicles', 'fxp_VehCarFuel', 'DynaSound_DS_w_Alamut', 'squad_smaw_cup', 'DIS_Enhanced_Gps', 'fxp_VehTank', 'OPTRE_JSRS', 'squad_rpg7_gm', 'PS_AMZ_MP40', 'squad_d10_gm', 'squad_l30_cup', 'squad_ak107_cup', 'squad_m21_sounds', 'WarFXPE_Weps', 'amz_improved_weapon_rifles', 'fxp_VehExpEffect', 'fxp_BombClust', 'squad_weapon_library_soundmod', 'squad_tt33_cup', 'PS_AMZ_ImpactsBullets', 'jsrs_soundmod_weapons', 'DIS_enhanced_map_ace', 'squad_mosin_cup', 'UPSL_aime_inventory', 'DynaSound_DS_w_AKM', 'PS_AMZ_MG34', 'fxp_ArtySmokShell', 'squad_azp23_cup', 'squad_tankcrack_soundimpact', 'squad_mg42_3cbf', 'squad_small_explosions', 'squad_m136_cup', 'squad_spg9_gm', 'DynaSound_DS_w_AK12', 'squad_tow_cup', 'UPSL_aime_change_ammo', 'DynaSound_DS_a_Comanche', 'squad_mp5_cup', 'squad_m2_cup', 'squad_kba_gm', 'DynaSound_DS_w_CMR76', 'squad_kpvt_gm', 'squad_ags30_cup', 'squad_aug_cup', 'DynaSound_DS_m_Bullets', 'squad_ak74_cup', 'squad_d10_d5_2a70_2a28_cup', 'ZECCUP', 'cem_movement', 'MIRA_Vehicle_Medical', 'squad_svd_gm', 'squad_2a46_cup', 'DynaSound_DS_a_Littlebird', 'AMZ_pistols_sounds', 'squad_sound_m256', 'PS_AMZ_M1Garand', 'SA_AdvancedTowing', 'L_ES_ES_sys', 'diwako_dui_main', 'DynaSound_DS_w_AKS', 'STUI_Core', 'jsrs_soundmod_cup_vehicles', 'diwako_dui_nametags', 'DynaSound_DS_w_Gau8', 'PS_AMZ_Thompson', 'squad_metis_cup', 'squad_sound_russia_pistols', 'crowsza_main', 'squad_ak102_cup', 'DynaSound_DS_main', 'squad_m240_cup', 'tsp_animate', 'squad_mg42_sound', 'fxp_VehHeli', 'squad_czbren2_cup', 'squad_vhsd2_sounds', 'squad_sg552_gm', 'L_ES_ES_main', 'squad_50calbulletcrack_soundimpact', 'AMZ_UGL_sounds', 'mrb_a3_airvisibility', 'squad_ak15_cup', 'DynaSound_DS_w_SPMG', 'squad_s53_3cbf', 'DynaSound_DS_a_Blackhawk', 'postscriptum_m1_garand_sounds', 'KKA3_ACE_Extension_Anim', 'PS_AMZ_MP44', 'squad_missiles_exp_sounds', 'squad_FAGOT_gm', 'squad_svd_cup', 'squad_m84_sounds', 'squad_gzh302_cup', 'cem_main', 'squad_remington700_cup', 'squad_APILAS_cup', 'sog_melee_bind', 'squad_aks74u_cup', 'squad_m60_3cbf', 'KKA3_ACE_Extension_Anim_A2', 'DynaSound_DS_a_Kasatka', 'amz_improved_weapon_mbt', 'squad_helo_small_explosions', 'PS_AMZ_SVT', 'DynaSound_DS_w_Vermin', 'squad_browning_cup', 'squad_shilka_gm', 'squad_sound_m242', 'squad_dshk_gm', 'squad_awm_Cup', 'squad_g3_3cbf', 'squad_ak47_cup', 'squad_2a14_cup', 'jsrs_soundmod_helicopters', 'squad_ak105_cup', 'DynaSound_DS_w_M14', 'DynaSound_DS_w_Type115_1', 'STUI_GroupHUD', 'squad_spg9_cup', 'hal_AutoPilot', 'squad_m203_3cbf', 'DynaSound_DS_w_PlaneLaunchers', 'squad_helo_big_explosions', 'squad_mk48_cup', 'PS_AMZ_Mosin', 'jsrs_soundmod_landvehicles', 'mrb_a3_seavesselvisibility', 'PS_AMZ_Springfield', 'squad_fnfal_sound', 'fxp_VehCar', 'AMZ_rpg32_sounds', 'DynaSound_DS_a_Lynx', 'DynaSound_DS_a_Kajman', 'squad_shells_explosions_cup', 'fxp_tracer', 'jsrs_soundmod_cfg_rhs_usf_air_vehicles', 'squad_sound_bgm17TOW', 'squad_uzi_cup', 'Blastcore_MainCore', 'squad_m92_sounds', 'squad_at5_cup', 'DynaSound_DS_w_CAR95', 'DynaSound_DS_w_MX', 'squad_m76_sounds', 'Blastcore_vanilla_smoke', 'GF_Deformer', 'DynaSound_DS_w_Sting', 'squad_2a42_2a72_cup', 'jsrs_soundmod_rhs_gref_weapons', 'squad_explosion_config', 'squad_galil_cup', 'squad_m3grease_sounds', 'jsrs_soundmod_environment', 'squad_ak74m_gl', 'squad_pkm_gm', 'squad_pkmstatic_3cbf', 'PS_AMZ_M1919', 'fxp_ArtyCanFired', 'PS_AMZ_ifa3config', 'fxp_Arty82mm', 'squad_sound_ak103', 'AMZ_SPG9_sounds', 'DynaSound_DS_lv_HatchBackSport', 'jsrs_soundmod_complete_edition', 'squad_xm8_cup', 'DynaSound_DS_w_30mmgatling', 'DynaSound_DS_w_Kir', 'squad_sound_PKP', 'UPSL_aime_group', 'PS_AMZ_ImpactsBullets_config', 'squad_kord_cup', 'squad_aks74gl_cup', 'tsp_common', 'squad_sound_smaw', 'blast_refract', 'fxp_MisRocSmo', 'squad_pkt_cup', 'squad_hk416_cup', 'DynaSound_DS_w_HMG', 'squad_lee_enfield_Cup', 'squad_rpg7_cup', 'squad_mp5_3cbf', 'DynaSound_DS_w_Cyrus', 'squad_ak107gl_cup', 'squad_sound_rpk', 'DynaSound_DS_w_MK200', 'jsrs_soundmod_rhs_saf_weapons', 'jsrs_soundmod_reloadingsounds', 'DynaSound_DS_w_Zubr', 'squad_ak19_cup', 'squad_sound_2a70', 'AMZ_sniper_sounds', 'squad_M134_Minigun', 'squad_g36_cup', 'DynaSound_DS_w_Protector', 'DynaSound_DS_w_120mm', 'STUI_GroupIndicators', 'squad_2a28_gm', 'DynaSound_DS_a_Merlin', 'squad_rockets_explosion_cup', 'squad_sound_50cal', 'squad_sound_t5000', 'squad_m134_cup', 'squad_g11_gm', 'squad_sound_glock17', 'Radio_Animations', 'PS_AMZ_K98k', 'DynaSound_DS_w_MLRS', 'fxp_Arty155mm', 'ZEI', 'squad_AK_3cbf', 'squad_L7', 'PS_AMZ_greasegun', 'DynaSound_DS_w_RPG7', 'DynaSound_DS_a_Chinook', 'Blastcore_VEP', 'squad_mk12_cup', 'squad_l129a1_cup', 'L_Immerse_Immerse_sys', 'DynaSound_DS_w_Launcher_Small', 'jsrs_soundmod_boats', 'jsrs_soundmod_explosions', 'diwako_dui_radar', 'crowsza_ace', 'squad_hk33_gm', 'squad_sound_rpg7', 'PS_AMZ_M1919_COAX', 'DynaSound_DS_w_Navid', 'squad_g17_cup', 'jsrs_soundmod_framework', 'squad_scar_cup', 'PS_AMZ_BAR', 'Vile_HUD', 'DynaSound_DS_w_Scalpel', 'jsrs_soundmod_cup_weapons', 'DynaSound_DS_w_SkyFire', 'squad_pm_cup', 'jsrs_soundmod_cfg_rhs_usf_weapons', 'jsrs_soundmod_complete_edition_soundfiles', 'L_Suppress_Suppress_sys', 'jsrs_soundmod_ifa3_aio_sounds', 'squad_m70_sounds', 'squad_rshg2_cup', 'squad_majutka_gm', 'squad_cz75_3cbf', 'crowsza_tfar', 'jsrs_soundmod_cfg_cup_weapons', 'squad_aug_3cbf', 'DynaSound_DS_w_acpc2', 'squad_sound_m110_sr25', 'squad_scorpion_cup', 'squad_pm_gm', 'AMZ_20mmgl_sounds', 'fxp_CannonFired', 'DynaSound_DS_w_CoaxMG', 'squad_tank_explosions', 'PH_TacSwap', 'DynaSound_DS_w_rook', 'STUI_AutoBrightness', 'compositions_a3', 'squad_sound_m27a7', 'squad_rpk_3cbf', 'squad_sound_m3maaws', 'squad_sound_akm', 'DynaSound_DS_w_AA', 'STUI_Stamina', 'squad_ACR_3cbf', 'squad_ak104_cup', 'Squad_RHSUSAF_Explosions', 'squad_rh120_m256_cup', 'jsrs_soundmod_cfg_rhs_afrf_weapons', 'tsp_throw', 'STUI_NameTags', 'squad_maaws_cup', 'squad_pzf84', 'DynaSound_DS_w_EMR', 'postscriptum_stg44_sounds', 'PS_AMZ_G43', 'squad_cz75_cup', 'squad_pt76_gm', 'squad_m16_gm', 'PS_AMZ_Piat', 'squad_sound_pkt_coax', 'L_ES_ES_sounds', 'squad_g3_gm', 'squad_as50_cup', 'squad_rocketcrack_soundimpact', 'fxp_BombGBU12', 'jsrs_soundmod_sonic_cracks', 'fxp_HitEfe', 'squad_mg3_gm', 'UPSL_aime', 'PS_AMZ_grenadeimpacts', 'BW_adaptive_roadway', 'squad_rpg26_cup', 'DynaSound_DS_w_MINIGUN762', 'fxp_LauncherSmo', 'squad_sg542_gm', 'squad_g36_3cbf', 'jsrs_soundmod_cfg_rhs_afrf_air_vehicles', 'WarFXPE', 'squad_g3a3_cup', 'DynaSound_DS_w_PDW2000', 'squad_sound_majutka', 'DynaSound_DS_w_P07', 'PLP_VTOLHoverController', 'fxp_VehCarAmmo', 'squad_vityaz_cup', 'squad_sound_TT33', 'squad_stgw_3cbf', 'squad_mg3_cup', 'DynaSound_DS_w_DAGR', 'squad_springfield_3cbf', 'DynaSound_DS_w_ASRAAM', 'DynaSound_DS_w_Type115_2', 'squad_sound_SVD', 'squad_m110_cup', 'fxp_GrenadeSmoke', 'squad_akm_cup', 'squad_ak12_cup', 'AdvDevTools', 'squad_mosin_sounds', 'squad_sound_spg9', 'DynaSound_DS_w_MINIGUN65', 'squad_sa58_cup', 'fxp_adat', 'squad_m72_cup', 'DynaSound_DS_sys', 'squad_rpk_cup', 'PS_AMZ_V_OQF_75', 'squad_ifvcannoncrack_soundimpact', 'squad_famas_cup', 'DynaSound_DS_w_Shared', 'DynaSound_DS_w_lim', 'squad_pkt_gm', 'crowsza_drawbuild', 'squad_SKS_3cbf', 'PS_AMZ_Bren', 'squad_weapon_m4_m16', 'female3_ICEMAN', 'DynaSound_DS_w_SDAR', 'DynaSound_DS_w_4Five', 'squad_mp7_sounds', 'DynaSound_DS_w_SPAR', 'squad_m16_cup', 'squad_sound_m107', 'squad_cz750_cup', 'DynaSound_DS_w_MAR10', 'squad_m14_3cbf', 'DynaSound_DS_w_Zafir', 'UPSL_aime_vehicle_controls', 'DynaSound_DS_w_20mmgatling', 'squad_FAL_OSW_3cbf', 'crowsza_teleport', 'DynaSound_DS_w_LRR', 'UPSL_aime_uav_terminal', 'squad_ak_gm']";
+force ace_common_deployedSwayFactor = 1;
 ace_common_displayTextColor = [0,0,0,0.1];
 ace_common_displayTextFontColor = [1,1,1,1];
+force ace_common_enableSway = true;
 ace_common_epilepsyFriendlyMode = false;
 ace_common_progressBarInfo = 2;
+force ace_common_restedSwayFactor = 1;
 ace_common_settingFeedbackIcons = 1;
 ace_common_settingProgressBarLocation = 0;
+force ace_common_swayFactor = 0.5;
 
 // ACE Cook off
 force ace_cookoff_ammoCookoffDuration = 0.5;
@@ -416,9 +418,13 @@ ace_interact_menu_moveToRoot__ace_trenches__grad_trenches_digEnvelopeLongNameEmp
 ace_interact_menu_moveToRoot__ace_trenches__grad_trenches_digEnvelopeShort = false;
 ace_interact_menu_moveToRoot__ace_trenches__grad_trenches_digEnvelopeVehicle = false;
 
+// ACE Kill Tracker
+force force ace_killtracker_trackAI = true;
+
 // ACE Logistics
 ace_cargo_carryAfterUnload = true;
 force force ace_cargo_enable = true;
+force force ace_cargo_enableDeploy = true;
 ace_cargo_enableRename = true;
 force force ace_cargo_loadTimeCoefficient = 1;
 ace_cargo_openAfterUnload = 0;
@@ -479,7 +485,7 @@ ace_maptools_rotateModifierKey = 1;
 
 // ACE Medical
 force force ace_medical_ai_enabledFor = 0;
-force ace_medical_ai_requireItems = 0;
+force force ace_medical_ai_requireItems = 0;
 force ace_medical_AIDamageThreshold = 0.1;
 force ace_medical_bleedingCoefficient = 0.2;
 force force ace_medical_blood_bloodLifetime = 300;
@@ -547,6 +553,7 @@ force force ace_medical_treatment_treatmentTimeSplint = 7;
 force force ace_medical_treatment_treatmentTimeTourniquet = 7;
 force ace_medical_treatment_woundReopenChance = 1;
 force force ace_medical_treatment_woundStitchTime = 5;
+force force ace_medical_vitals_simulateSpO2 = false;
 
 // ACE Medical Interface
 ace_medical_feedback_bloodVolumeEffectType = 0;
@@ -582,6 +589,7 @@ force force ace_medical_gui_openAfterTreatment = true;
 ace_medical_gui_peekMedicalInfoReleaseDelay = 1;
 ace_medical_gui_peekMedicalOnHit = false;
 ace_medical_gui_peekMedicalOnHitDuration = 1;
+force ace_medical_gui_showBleeding = 2;
 force ace_medical_gui_showBloodlossEntry = true;
 force ace_medical_gui_showDamageEntry = false;
 ace_medical_gui_tourniquetWarning = false;
@@ -967,6 +975,13 @@ mts_markers_displayShortDTG = true;
 mts_markers_saveLastSelection = false;
 mts_markers_useVanillaColors = false;
 
+// MrSanchez' Headlamp
+force force SAN_Headlamp_AI_UpdateRate = 30;
+force force SAN_Headlamp_Arcade = true;
+force force SAN_Headlamp_Multiplayer_UpdateRate = 30;
+force SAN_Headlamp_RenderDistance = 350;
+SAN_Headlamp_SoundClickEnabled = false;
+
 // NIArms
 force force niarms_gripSwitch = true;
 force force niarms_magSwitch = true;
@@ -1254,6 +1269,7 @@ zen_faction_filter_0_Atlas_OPF_V_wdl_F = true;
 zen_faction_filter_0_Atlas_OPF_W_F = true;
 zen_faction_filter_0_CUP_O_ChDKZ = true;
 zen_faction_filter_0_CUP_O_RU = true;
+zen_faction_filter_0_CUP_O_RUS_M = true;
 zen_faction_filter_0_CUP_O_SLA = true;
 zen_faction_filter_0_CUP_O_TK = true;
 zen_faction_filter_0_CUP_O_TK_MILITIA = true;
@@ -1392,6 +1408,7 @@ zen_faction_filter_1_BLU_T_F = true;
 zen_faction_filter_1_BLU_TURA_lxWS = true;
 zen_faction_filter_1_BLU_UN_lxWS = true;
 zen_faction_filter_1_BLU_W_F = true;
+zen_faction_filter_1_CUP_B_AFU = true;
 zen_faction_filter_1_CUP_B_CDF = true;
 zen_faction_filter_1_CUP_B_CZ = true;
 zen_faction_filter_1_CUP_B_GB = true;
