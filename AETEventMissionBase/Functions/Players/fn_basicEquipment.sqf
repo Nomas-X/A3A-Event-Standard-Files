@@ -96,7 +96,7 @@ if (_GPSsForEveryone select 1) then {
 };
 
 if (getClientState == "BRIEFING READ") then {
-	if (__medicalAndMiscForEveryone) then {
+	if (_medicalAndMiscForEveryone) then {
 		if ((uniform player) != "") then {
 			private _playerUniform = uniformContainer player;
 			[_playerUniform, _uniformItems] spawn {
