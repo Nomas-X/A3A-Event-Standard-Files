@@ -23,8 +23,7 @@ params ["_unit", "_listOfPlayers", "_listOfFaces"];
 //sets face
 if (_unit in _listOfPlayers) then {
 	if (!((face _unit) in _listOfFaces)) then {
-		private _face = _oldUnit getVariable ["AET_setFace_currentFace", selectRandom _listOfFaces];
+		private _face = selectRandom _listOfFaces;
 		[_unit, _face] remoteExec ["setFace", 0, _unit];
-		_unit setVariable ["AET_setFace_currentFace", _face];
 	};
 };
